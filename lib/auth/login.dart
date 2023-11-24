@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:juru_sampah/auth/register.dart';
 
 // void main() {
@@ -24,6 +25,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  bool isShowPassword = false;
   bool isEmailFilled = false;
   bool isPasswordFilled = false;
   bool isEmailFocused = false;
@@ -99,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 16),
               TextFormField(
                 controller: _passwordController,
-                obscureText: true,
+                obscureText: !isShowPassword,
                 onChanged: (value) {
                   setState(() {
                     isPasswordFilled = value.isNotEmpty;
@@ -109,15 +111,21 @@ class _LoginPageState extends State<LoginPage> {
                   hintText: 'Password',
                   icon: Icon(Icons.lock,
                       color: isPasswordFilled ? Colors.green : Colors.grey),
-                  suffixIcon: isPasswordFilled
-                      ? const Icon(
-                          Icons.visibility,
-                          color: Colors.green,
-                        )
-                      : const Icon(
-                          Icons.visibility,
-                          color: Colors.grey,
-                        ),
+                  suffixIcon: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          isShowPassword = !isShowPassword;
+                        });
+                      },
+                      icon: isShowPassword
+                          ? const Icon(
+                              Icons.visibility,
+                              color: Colors.green,
+                            )
+                          : const Icon(
+                              Icons.visibility_off,
+                              color: Colors.grey,
+                            )),
                 ),
               ),
               const SizedBox(height: 16),
@@ -141,8 +149,34 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Colors.white)),
               ),
               const SizedBox(height: 16),
-              const Text('atau', textAlign: TextAlign.center),
-              const SizedBox(height: 16),
+              Row(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/Line 1.png', // Ganti dengan path gambar Anda
+                    // height: 10,
+                    width: 125,
+                    // fit: BoxFit.contain,
+                  ),
+                  const SizedBox(width: 24.30),
+                  const Text('atau'),
+                  const SizedBox(width: 24.30),
+                  Image.asset(
+                    'assets/Line 1.png', // Ganti dengan path gambar Anda
+                    // height: 10,
+                    width: 125,
+                    // fit: BoxFit.contain,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 13),
+              Text('Silahkan daftar jika anda tidak memiliki akun',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                  )),
+              const SizedBox(height: 14),
               Center(
                 child: OutlinedButton(
                   onPressed: () {
