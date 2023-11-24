@@ -10,11 +10,15 @@ class RegisterForm extends StatefulWidget {
 
 class _RegisterFormState extends State<RegisterForm> {
   final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _password2Controller = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  bool isUsernameFilled = false;
+  bool isPhoneFilled = false;
   bool isEmailFilled = false;
   bool isPasswordFilled = false;
+  bool isPassword2filled = false;
   bool isCheckboxChecked = false;
 
   @override
@@ -58,11 +62,11 @@ class _RegisterFormState extends State<RegisterForm> {
                     decoration: InputDecoration(
                       hintText: 'Username',
                       icon: Icon(Icons.contact_page,
-                          color: isEmailFilled ? Colors.green : Colors.grey),
+                          color: isUsernameFilled ? Colors.green : Colors.grey),
                     ),
                     onChanged: (value) {
                       setState(() {
-                        isEmailFilled = value.isNotEmpty;
+                        isUsernameFilled = value.isNotEmpty;
                       });
                     },
                   ),
@@ -86,11 +90,11 @@ class _RegisterFormState extends State<RegisterForm> {
                     decoration: InputDecoration(
                       hintText: 'No. Telepon',
                       icon: Icon(Icons.phone_android,
-                          color: isEmailFilled ? Colors.green : Colors.grey),
+                          color: isPhoneFilled ? Colors.green : Colors.grey),
                     ),
                     onChanged: (value) {
                       setState(() {
-                        isEmailFilled = value.isNotEmpty;
+                        isPhoneFilled = value.isNotEmpty;
                       });
                     },
                   ),
@@ -111,16 +115,17 @@ class _RegisterFormState extends State<RegisterForm> {
                   ),
                   const SizedBox(height: 16.0),
                   TextField(
-                    controller: _passwordController,
+                    controller: _password2Controller,
                     obscureText: true,
                     decoration: InputDecoration(
                       hintText: 'Confirm Password',
                       icon: Icon(Icons.lock,
-                          color: isPasswordFilled ? Colors.green : Colors.grey),
+                          color:
+                              isPassword2filled ? Colors.green : Colors.grey),
                     ),
                     onChanged: (value) {
                       setState(() {
-                        isPasswordFilled = value.isNotEmpty;
+                        isPassword2filled = value.isNotEmpty;
                       });
                     },
                   ),
