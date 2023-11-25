@@ -131,8 +131,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const HomePage()),
+                    MaterialPageRoute(builder: (context) => const HomePage()),
                   );
                   // Handle login as admin
                 },
@@ -143,7 +142,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 16),
               Row(
-                // mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
                     'assets/Line 1.png', // Ganti dengan path gambar Anda
