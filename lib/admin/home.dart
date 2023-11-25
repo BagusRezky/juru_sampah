@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:juru_sampah/admin/data_transaksi.dart';
 import 'package:juru_sampah/admin/data_warga.dart';
+import 'package:juru_sampah/auth/login.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -27,6 +28,10 @@ class HomePage extends StatelessWidget {
           const SizedBox(width: 10),
           ElevatedButton(
             onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginPage()),
+              );
               // Tambahkan fungsi logout di sini
             },
             child: const Text('Logout'),
