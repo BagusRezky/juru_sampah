@@ -1,19 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:juru_sampah/admin/home.dart';
 import 'package:juru_sampah/auth/register.dart';
-
-// void main() {
-//   runApp(MyApp());
-// }
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: LoginPage(),
-//     );
-//   }
-// }
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -141,6 +129,11 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 8),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const HomePage()),
+                  );
                   // Handle login as admin
                 },
                 style: ElevatedButton.styleFrom(
