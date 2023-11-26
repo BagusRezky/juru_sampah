@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:juru_sampah/user/home_user.dart';
 import 'package:juru_sampah/user/riwayat_transaksi.dart';
 import 'package:juru_sampah/user/upload_bukti.dart';
+import 'package:juru_sampah/user/pembayaran_online.dart';
 
 class DetailTransaksi extends StatelessWidget {
   const DetailTransaksi({Key? key}) : super(key: key);
@@ -96,7 +97,7 @@ class DetailTransaksi extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const UploadBukti(),
+                            builder: (context) => const Pembayaran(),
                           ),
                         );
                       },
