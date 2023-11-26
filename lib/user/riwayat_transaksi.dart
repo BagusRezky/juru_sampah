@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:juru_sampah/user/detail_trasaksi.dart';
 import 'package:juru_sampah/user/home_user.dart';
-import 'package:juru_sampah/user/upload_bukti.dart';
 
 class RiwayatTagihan extends StatelessWidget {
   const RiwayatTagihan({Key? key}) : super(key: key);
@@ -68,7 +68,7 @@ class RiwayatTagihan extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const UploadBukti()),
+                                          const DetailTransaksi()),
                                 );
                                 // Tambahkan logika untuk kembali ke halaman sebelumnya
                               },
