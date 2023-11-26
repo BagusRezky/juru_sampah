@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:juru_sampah/admin/data_transaksi.dart';
 import 'package:juru_sampah/admin/data_warga.dart';
 import 'package:juru_sampah/auth/login.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -39,8 +40,8 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.all(15.0),
@@ -157,6 +158,151 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
+          CarouselSlider(
+              items: [
+                Card(
+                  shadowColor: Colors.black,
+                  child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color.fromARGB(255, 240, 234, 234))),
+                      padding: const EdgeInsets.all(20),
+                      width: 330,
+                      child: Column(children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(6),
+                          child: const Image(
+                            image: AssetImage('assets/carousel_1.jpg'),
+                            width: 250,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        const Text(
+                          'Sampah Masyarakat Semakin Menumpuk',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 14),
+                        ),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        const Text(
+                          'asdasdklaksdlakjsldkjalskdjlaksjdlkajsldkjalskjdlaksjdlkajsldkajslkdjalksjdlaksjdlkajslkdjalksdjlakjsldkjalksjdlaksjdlakjsldkjasldkjas',
+                          style: TextStyle(fontSize: 14),
+                          textAlign: TextAlign.justify,
+                        )
+                      ])),
+                ),
+                Card(
+                  shadowColor: Colors.black,
+                  child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color.fromARGB(255, 240, 234, 234))),
+                      padding: const EdgeInsets.all(20),
+                      width: 330,
+                      child: Column(children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(6),
+                          child: const Image(
+                            image: AssetImage('assets/carousel_2.jpg'),
+                            width: 250,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        const Text(
+                          'Sampah Masyarakat Semakin Menumpuk',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 14),
+                        ),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        const Text(
+                          'asdasdklaksdlakjsldkjalskdjlaksjdlkajsldkjalskjdlaksjdlkajsldkajslkdjalksjdlaksjdlkajslkdjalksdjlakjsldkjalksjdlaksjdlakjsldkjasldkjas',
+                          style: TextStyle(fontSize: 14),
+                          textAlign: TextAlign.justify,
+                        )
+                      ])),
+                ),
+                Card(
+                  shadowColor: Colors.black,
+                  child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color.fromARGB(255, 240, 234, 234))),
+                      padding: const EdgeInsets.all(20),
+                      width: 330,
+                      child: Column(children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(6),
+                          child: const Image(
+                            image: AssetImage('assets/carousel_3.jpg'),
+                            width: 250,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        const Text(
+                          'Sampah Masyarakat Semakin Menumpuk',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 14),
+                        ),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        const Text(
+                          'asdasdklaksdlakjsldkjalskdjlaksjdlkajsldkjalskjdlaksjdlkajsldkajslkdjalksjdlaksjdlkajslkdjalksdjlakjsldkjalksjdlaksjdlakjsldkjasldkjas',
+                          style: TextStyle(fontSize: 14),
+                          textAlign: TextAlign.justify,
+                        )
+                      ])),
+                ),
+                Card(
+                  shadowColor: Colors.black,
+                  child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color.fromARGB(255, 240, 234, 234))),
+                      padding: const EdgeInsets.all(20),
+                      width: 330,
+                      child: Column(children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(6),
+                          child: const Image(
+                            image: AssetImage('assets/carousel_4.jpg'),
+                            width: 250,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        const Text(
+                          'Sampah Masyarakat Semakin Menumpuk',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 14),
+                        ),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        const Text(
+                          'asdasdklaksdlakjsldkjalskdjlaksjdlkajsldkjalskjdlaksjdlkajsldkajslkdjalksjdlaksjdlkajslkdjalksdjlakjsldkjalksjdlaksjdlakjsldkjasldkjas',
+                          style: TextStyle(fontSize: 14),
+                          textAlign: TextAlign.justify,
+                        )
+                      ])),
+                )
+              ],
+              options: CarouselOptions(
+                height: 310,
+                autoPlay: false,
+                autoPlayAnimationDuration: const Duration(milliseconds: 500),
+                aspectRatio: 16 / 9,
+              )),
           Container(
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
