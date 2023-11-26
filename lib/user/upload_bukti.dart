@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:juru_sampah/user/detail_trasaksi.dart';
 import 'package:juru_sampah/user/home_user.dart';
 import 'package:juru_sampah/user/riwayat_transaksi.dart';
 
@@ -24,7 +25,7 @@ class _UploadBuktiState extends State<UploadBukti> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const RiwayatTagihan()),
+              MaterialPageRoute(builder: (context) => const DetailTransaksi()),
             );
           },
         ),
