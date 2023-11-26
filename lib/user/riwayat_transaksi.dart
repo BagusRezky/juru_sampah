@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:juru_sampah/user/home_user.dart';
+import 'package:juru_sampah/user/upload_bukti.dart';
 
 class RiwayatTagihan extends StatelessWidget {
   const RiwayatTagihan({Key? key}) : super(key: key);
@@ -61,24 +62,35 @@ class RiwayatTagihan extends StatelessWidget {
                                 fontSize: 12.0,
                               ),
                             ),
-                            Container(
-                              padding: const EdgeInsets.only(
-                                  top: 2, left: 12, right: 12, bottom: 2),
-                              decoration: BoxDecoration(
-                                color: const Color(0xff121E87),
-                                borderRadius: BorderRadius.circular(5.0),
-                              ),
-                              child: const Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Pembayaran',
-                                    style: TextStyle(
-                                      fontSize: 12.0,
-                                      color: Colors.white,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const UploadBukti()),
+                                );
+                                // Tambahkan logika untuk kembali ke halaman sebelumnya
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.only(
+                                    top: 2, left: 12, right: 12, bottom: 2),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xff121E87),
+                                  borderRadius: BorderRadius.circular(5.0),
+                                ),
+                                child: const Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Pembayaran',
+                                      style: TextStyle(
+                                        fontSize: 12.0,
+                                        color: Colors.white,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ],
