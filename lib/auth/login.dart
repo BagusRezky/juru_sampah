@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:juru_sampah/admin/home.dart';
 import 'package:juru_sampah/auth/register.dart';
+import 'package:juru_sampah/user/home_user.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -119,6 +120,11 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const HomePageUser()),
+                  );
                   // Handle login as user
                 },
                 style: ElevatedButton.styleFrom(
