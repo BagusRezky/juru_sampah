@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -42,27 +43,47 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              decoration: BoxDecoration(
-                color: const Color(0xffF2F2F2),
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              child: const Row(
-                children: [
-                  SizedBox(width: 10),
-                  Icon(Icons.search),
-                  SizedBox(width: 10),
-                  Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Cari...',
-                        border: InputBorder.none,
-                      ),
+            padding: const EdgeInsets.all(15.0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xffF2F2F2),
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: const Row(
+                      children: [
+                        SizedBox(width: 10),
+                        Icon(Icons.search),
+                        SizedBox(width: 10),
+                        Expanded(
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Cari...',
+                              border: InputBorder.none,
+                            ),
+                          ),
+                        ),
+                        Icon(Icons.mic),
+                        SizedBox(width: 10),
+                        // Wrap the Container with the filter icon in a Row
+                      ],
                     ),
                   ),
-                ],
-              ),
+                ),
+                const SizedBox(
+                  width: 6,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    color: const Color(0xffF2F2F2),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: const Icon(Icons.filter_alt, color: Colors.black),
+                ),
+              ],
             ),
           ),
           const Padding(
