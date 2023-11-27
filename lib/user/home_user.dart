@@ -1,8 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:juru_sampah/auth/login.dart';
 import 'package:juru_sampah/user/riwayat_transaksi.dart';
-import 'package:juru_sampah/user/pembayaran_online.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 
 class HomePageUser extends StatelessWidget {
   const HomePageUser({Key? key}) : super(key: key);
@@ -134,7 +133,7 @@ class HomePageUser extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.all(8.0),
             child: Text(
-              'Artikel',
+              'Appeal',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
@@ -160,16 +159,16 @@ class HomePageUser extends StatelessWidget {
                           height: 6,
                         ),
                         const Text(
-                          'Sampah Masyarakat Semakin Menumpuk',
+                          'Bayarlah sampah dengan penuh kesadaran',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14),
+                              fontWeight: FontWeight.bold, fontSize: 12),
                         ),
                         const SizedBox(
                           height: 6,
                         ),
                         const Text(
-                          'asdasdklaksdlakjsldkjalskdjlaksjdlkajsldkjalskjdlaksjdlkajsldkajslkdjalksjdlaksjdlkajslkdjalksdjlakjsldkjalksjdlaksjdlakjsldkjasldkjas',
-                          style: TextStyle(fontSize: 14),
+                          'Dukung keberlanjutan! Bayarlah sampah dengan penuh kesadaran, karena setiap kontribusi kita membantu menciptakan lingkungan yang lebih baik. Bersama, kita bisa membangun masa depan yang lebih hijau dan berkelanjutan',
+                          style: TextStyle(fontSize: 10),
                           textAlign: TextAlign.justify,
                         )
                       ])),
@@ -194,16 +193,16 @@ class HomePageUser extends StatelessWidget {
                           height: 6,
                         ),
                         const Text(
-                          'Sampah Masyarakat Semakin Menumpuk',
+                          'Setiap langkah kecil memiliki dampak besar untuk lingkungan.',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14),
+                              fontWeight: FontWeight.bold, fontSize: 12),
                         ),
                         const SizedBox(
                           height: 6,
                         ),
                         const Text(
-                          'asdasdklaksdlakjsldkjalskdjlaksjdlkajsldkjalskjdlaksjdlkajsldkajslkdjalksjdlaksjdlkajslkdjalksdjlakjsldkjalksjdlaksjdlakjsldkjasldkjas',
-                          style: TextStyle(fontSize: 14),
+                          'Setiap langkah kecil kita memiliki dampak besar untuk lingkungan. Mari kita saling mendukung dengan membayar sampah, agar sistem pengelolaan sampah bisa terus berjalan dengan baik dan bermanfaat bagi kita semua.',
+                          style: TextStyle(fontSize: 10),
                           textAlign: TextAlign.justify,
                         )
                       ])),
@@ -228,16 +227,16 @@ class HomePageUser extends StatelessWidget {
                           height: 6,
                         ),
                         const Text(
-                          'Sampah Masyarakat Semakin Menumpuk',
+                          'Ayo, jadilah agen perubahan!',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14),
+                              fontWeight: FontWeight.bold, fontSize: 12),
                         ),
                         const SizedBox(
                           height: 6,
                         ),
                         const Text(
-                          'asdasdklaksdlakjsldkjalskdjlaksjdlkajsldkjalskjdlaksjdlkajsldkajslkdjalksjdlaksjdlkajslkdjalksdjlakjsldkjalksjdlaksjdlakjsldkjasldkjas',
-                          style: TextStyle(fontSize: 14),
+                          'Ayo, jadilah agen perubahan! Bayarlah sampah dengan sukarela untuk mendukung sistem pengelolaan sampah yang lebih efisien. Dengan begitu, kita bisa menjaga keindahan lingkungan tempat tinggal kita',
+                          style: TextStyle(fontSize: 10),
                           textAlign: TextAlign.justify,
                         )
                       ])),
@@ -263,16 +262,16 @@ class HomePageUser extends StatelessWidget {
                           height: 6,
                         ),
                         const Text(
-                          'Sampah Masyarakat Semakin Menumpuk',
+                          'wujudkan lingkungan yang bersih dan sehat!',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14),
+                              fontWeight: FontWeight.bold, fontSize: 12),
                         ),
                         const SizedBox(
                           height: 6,
                         ),
                         const Text(
-                          'asdasdklaksdlakjsldkjalskdjlaksjdlkajsldkjalskjdlaksjdlkajsldkajslkdjalksjdlaksjdlkajslkdjalksdjlakjsldkjalksjdlaksjdlakjsldkjasldkjas',
-                          style: TextStyle(fontSize: 14),
+                          'Mari kita bersama-sama wujudkan lingkungan yang bersih dan sehat! Dengan membayar sampah, kita memberikan kontribusi nyata untuk pengelolaan sampah yang lebih baik dan menjaga kelestarian alam.',
+                          style: TextStyle(fontSize: 10),
                           textAlign: TextAlign.justify,
                         )
                       ])),
